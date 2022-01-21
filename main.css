@@ -1,0 +1,344 @@
+:root {
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2,12,27,0.7);
+    --dark-slate: #495670;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green: #64ffda;
+    --green-tint: rgba(8, 14, 12, 0.1);
+    --pink: #f57dff;
+    --blue: #57cbff;
+    --font-main: "Tenor Sans","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    --font-sans: "Fira Sans","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    --font-mono: "Roboto Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    --fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+    --fz-heading: 32px;
+    --border-radius: 4px;
+    --nav-height: 100px;
+    --nav-scroll-height: 70px;
+    --tab-height: 42px;
+    --tab-width: 120px;
+    --easing: cubic-bezier(0.645,0.045,0.355,1);
+    --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    --hamburger-width: 30px;
+    --ham-before: top 0.1s ease-in 0.25s,opacity 0.1s ease-in;
+    --ham-before-active: top 0.1s ease-out,opacity 0.1s ease-out 0.12s;
+    --ham-after: bottom 0.1s ease-in 0.25s,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
+    --ham-after-active: bottom 0.1s ease-out,transform 0.22s cubic-bezier(0.215,0.61,0.355,1) 0.12s;
+}
+body{
+    height: 500vh;
+    margin: 0;
+    background-color: var(--navy);
+}
+
+.logo{
+    height: 140px;
+    width: 80px;
+    position: absolute;
+    top: 0;
+    margin-left: 50px;
+    background-color: var(--green);
+}
+
+.logo-upper{
+    height: 60px;
+    width: 80px;
+    /* font-family: Roboto Mono; */
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+
+}
+.logo-lower{
+    height: 80px;
+    width: 0px;
+    border-top: 40px solid var(--green);
+    border-right: 40px solid var(--navy);
+    border-bottom: 40px solid var(--navy);
+    border-left: 40px solid var(--navy);
+}
+
+.mynav{
+    height: var(--nav-height);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--navy);
+    z-index: 10;
+    /* box-shadow: 2px 2px 2px red; */
+}
+
+.navbuttondiv{
+    position: absolute;
+    display: flex;
+    right: 55px;
+    justify-content: center;
+}
+
+.navbutton{
+    /* width: 100px; */
+    color: var(--light-slate);
+    background: transparent;
+    border: none;
+    margin-left: 35px;
+    font-family: var(--font-mono);
+}
+.content{
+    height: 100%;
+    width: calc(100%-360px);
+    padding-left: 180px;
+    padding-right: 180px;
+    padding-top: 20px;
+}
+
+#hi{
+    margin: 0px 0px 30px 4px;
+    font-weight: 400;
+    font-family: Roboto Mono;
+    font-family: var(--font-mono);
+    font-size: clamp(var(--fz-sm),5vw,var(--fz-md));
+}
+
+#name{
+    margin: 0px 0px 0px 0px;
+    font-weight: 600;
+    font-family: var(--font-main);
+    font-size: clamp(40px, 8vw, 70px);
+}
+
+#desc{
+    margin: 0px 0px 30px 0px;
+    font-weight: 600;
+    font-family: var(--font-main);
+    font-size: clamp(40px, 8vw, 60px);
+}
+
+#desc2{
+    margin: 0px 0px 30px 4px;
+    font-weight: 400;
+    font-family: var(--font-sans);
+    font-size: clamp(12px, 8vw, 16px);
+    line-height: 28px;
+}
+
+a{
+    color: var(--green);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.mybutton{
+    padding: 15px 20px 15px 20px;
+    background-color: transparent;
+    color: var(--green);
+    font-family: var(--font-mono);
+    border: 1px solid var(--green);
+    border-radius: 4px;
+}
+
+.aboutme{
+
+    margin-top: 240px;
+}
+
+.sectionheading{
+    font-size: var(--fz-xxl);
+    color: var(--light-slate);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.colorgreen{
+    color: var(--green);
+}
+.colorslate{
+    color: var(--slate);
+}
+.colorlightslate{
+    color: var(--light-slate);
+}
+.colorlightestslate{
+    color: var(--lightest-slate);
+}
+
+.contact{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin-left: 40px;
+    display: grid;
+    grid-gap: 30px;
+    justify-content: center;
+}
+
+.email{
+    position: fixed;
+    bottom: 140px;
+    right: 0;
+    margin-right: -80px;
+    display: flex;
+    grid-gap: 25px;
+    align-items: center;
+    transform: rotate(90deg);
+}
+
+.mailid{
+    color: var(--light-slate);
+    font-family: var(--font-mono);
+    font-size: 14px;
+}
+
+.mailid p{
+    margin: 0px;
+}
+.contacticon{
+    width: 20px;
+    height: 20px;
+}
+
+.line{
+    width: 2px;
+    height: 100px;
+    background-color: var(--slate);
+    margin-left: 9px;
+}
+
+.lineh{
+    width: 100px;
+    height: 2px;
+    background-color: var(--slate);
+}
+
+svg.feather {
+    fill: none;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    fill: currentcolor;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .main{
+    height: 450px;
+    width: 100%;
+    background-color: var(--navy);
+    z-index: 1;
+}
+
+.left-pane{
+    width: 35%;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.right-pane{
+    width: 65%;
+    right: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+.photo{
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.centerline{
+    height: 350px;
+    width: 2px;
+    background-color: white;
+    position: absolute;
+    left: 35%;
+    margin-left: 30px;
+    z-index: 5;
+    margin-top: 50px;
+    border-radius: 50%;
+
+}
+
+.tilt-line{
+    height: 60px;
+    width: 100%;
+    background-color: var(--lightest-navy);
+    transform: rotate(358deg);
+    position: relative;
+    top: -30px;
+}
+
+.namediv{
+    z-index: 5;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.name{
+    height: 35px;
+    font-size: 50px;
+    font-family: Ubuntu;
+}
+.designation{
+    font-family: Dongle;
+    font-size: 35px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
