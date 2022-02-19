@@ -42,6 +42,10 @@ body{
     background-color: var(--navy);
 }
 
+html {
+    scroll-behavior: smooth;
+}  
+
 .logo{
     height: 140px;
     width: 80px;
